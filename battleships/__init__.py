@@ -170,9 +170,10 @@ class Game(object):
                 if x.upper() in ['Q', 'QUIT']:
                     return
                 try:
-                    assert int(x) < 11, "Invalid input, row must be an integer between 1-10"
+                    assert int(x) < 11
                     x_valid = True
                 except:
+                    print("Invalid input, row must be an integer between 1-10")
                     continue
             self._get_response(int(x)-1,y)
             turns -= 1
